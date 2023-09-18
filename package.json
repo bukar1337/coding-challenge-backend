@@ -1,0 +1,64 @@
+{
+  "name": "foxbase-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "npx sequelize-cli db:migrate",
+    "undo-migrate": "npx sequelize-cli db:migrate:undo",
+    "seed": "sequelize-cli db:seed:all",
+    "unseed": "npx sequelize-cli db:seed:undo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/node": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "axios": "^1.4.0",
+    "babel-eslint": "^10.1.0",
+    "cypress": "^9.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "joi": "^17.9.2",
+    "lint-staged": "^13.2.3",
+    "prettier": "^2.8.8",
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-bundle": "^6.0.0",
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-http": "^3.2.0",
+    "serverless-offline": "^12.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@types/pg": "^8.10.2",
+    "apollo-server-lambda": "^3.12.1",
+    "dotenv": "^16.3.1",
+    "faker": "^5.5.3",
+    "lodash": "^4.17.21",
+    "mongoose": "^7.3.1",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "random": "^4.1.0",
+    "sequelize": "^6.32.1",
+    "sequelize-cli": "^6.6.1",
+    "uuid": "^9.0.0",
+    "winston": "^3.10.0"
+  }
+}

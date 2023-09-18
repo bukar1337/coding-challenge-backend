@@ -1,0 +1,233 @@
+service: foxbase-assignment-serverless
+
+configValidationMode: error
+
+package:
+  exclude:
+    - seeders
+    - .gitignore
+    - bitbucket-pipelines.yml
+    - README.md
+    - serverless.yml
+  excludeDevDependencies: true
+  individually: true
+
+provider:
+  name: aws
+
+  runtime: nodejs16.x
+  apiGateway: # Applying rate limit to prevent from DOS attack
+    usagePlan:
+      quota:
+        limit: 1000
+        period: MONTH
+      throttle:
+        burstLimit: 100
+        rateLimit: 50
+
+  region: us-east-1
+
+  stage: ${opt:stage, 'dev'}
+
+  tags:
+    company: numa
+    module: algorithm
+
+  environment:
+    IS_OFFLINE: $(env:IS_OFFLINE)
+
+plugins:
+  - serverless-bundle # For creation of bundle with the core javascript
+  - serverless-offline # For running the application offline
+  - serverless-dotenv-plugin # For consuming variables from .env
+  - serverless-apigw-binary # For controlling api gateway
+
+functions:
+  create-selector:
+    handler: src/handlers/selector/create.handler
+    timeout: 30
+    events:
+      - http:
+          method: post
+          path: /foxbase/selector
+          cors: true
+  questionaire-create:
+    handler: src/handlers/questionaire/create.handler
+    timeout: 30
+    events:
+      - http:
+          method: post
+          path: /foxbase/questionaire
+          cors: true
+  questionaire-resume:
+    handler: src/handlers/questionaire/resume.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/questionaire/{id}
+          cors: true
+  stats:
+    handler: src/handlers/admin/stats.handler
+    timeout: 30
+    events:
+      - http:
+          method: post
+          path: /foxbase/stats
+          cors: true
+  user-oper:
+    handler: src/handlers/admin/user.handler
+    timeout: 30
+    events:
+      - http:
+          method: post
+          path: /foxbase/user
+          cors: true
+  condition-create:
+    handler: src/handlers/condition/create.handler
+    timeout: 30
+    events:
+      - http:
+          method: post
+          path: /foxbase/condition
+          cors: true
+  condition-view:
+    handler: src/handlers/condition/view.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/condition/{id}
+          cors: true
+  condition-list:
+    handler: src/handlers/condition/list.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/condition
+          cors: true
+  questionaire-post:
+    handler: src/handlers/recommendation/answer.handler
+    timeout: 30
+    events:
+      - http:
+          method: post
+          path: /foxbase/recommendation/answer/{id}
+          cors: true
+  recomendations:
+    handler: src/handlers/recommendation/recommend.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/recommendation/{id}
+          cors: true
+  view-question-by-page:
+    handler: src/handlers/page/questions.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/page/question/{id}
+          cors: true
+  page-view:
+    handler: src/handlers/page/view.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/page/{id}
+          cors: true
+  page-update:
+    handler: src/handlers/page/update.handler
+    timeout: 30
+    events:
+      - http:
+          method: put
+          path: /foxbase/page/{id}
+          cors: true
+  page-list:
+    handler: src/handlers/page/list.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/page
+          cors: true
+  page-create:
+    handler: src/handlers/page/create.handler
+    timeout: 30
+    events:
+      - http:
+          method: post
+          path: /foxbase/page
+          cors: true
+  question-create:
+    handler: src/handlers/question/create.handler
+    timeout: 30
+    events:
+      - http:
+          method: post
+          path: /foxbase/question
+          cors: true
+  question-list:
+    handler: src/handlers/question/list.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/question
+          cors: true
+  question-view:
+    handler: src/handlers/question/view.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/question/{id}
+          cors: true
+  question-update:
+    handler: src/handlers/question/update.handler
+    timeout: 30
+    events:
+      - http:
+          method: put
+          path: /foxbase/question/{id}
+          cors: true
+  product-list:
+    handler: src/handlers/product/list.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/product
+          cors: true
+  product-view:
+    handler: src/handlers/product/view.handler
+    timeout: 30
+    events:
+      - http:
+          method: get
+          path: /foxbase/product/{id}
+          cors: true
+custom:
+  apigwBinary: # For compression of response
+    types:
+      - "*/*"
+  dotenv:
+    path: .env
+  serverless-offline:
+    useChildProcesses: true;
+
+resources:
+  Resources:
+    GatewayResponseDefault4XX:
+      Type: "AWS::ApiGateway::GatewayResponse"
+      Properties:
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+        ResponseType: DEFAULT_4XX
+        RestApiId:
+          Ref: "ApiGatewayRestApi"

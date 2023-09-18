@@ -1,0 +1,6 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "integrationFolder": "tests",
+  "defaultCommandTimeout": 10000,
+  "responseTimeout": 30000
+}

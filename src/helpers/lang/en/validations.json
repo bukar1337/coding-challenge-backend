@@ -1,0 +1,10 @@
+{
+    "fail": "Whoops, something went wrong!",
+    "fix": "Please fix the following!",
+    "page": {
+        "exist": "Page already exist!"
+    },
+    "condtion": {
+        "exist": "Condition already exist with this answer"
+    }
+}

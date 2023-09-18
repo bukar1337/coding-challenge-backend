@@ -1,0 +1,2169 @@
+{
+	"info": {
+		"_postman_id": "456df440-3b48-421a-9d22-a82a3d4f6755",
+		"name": "Foxbase Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23774627"
+	},
+	"item": [
+		{
+			"name": "Question",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"card\",\r\n    \"pageID\":\"cc6de60f-e921-4dd2-8811-bef587da85c1\",\r\n    \"text\":\"What is your name?\",\r\n    \"answers\":[{\r\n        \"value\":\"Shoaib\"},\r\n        {\r\n        \"value\":\"Noor\"}\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}question",
+							"host": [
+								"{{API_URL}}question"
+							]
+						},
+						"description": "This API is used to create question by entering the required properties"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\":\"card\",\r\n    \"pageID\":\"cc6de60f-e921-4dd2-8811-bef587da85c1\",\r\n    \"text\":\"What is your name?\",\r\n    \"answers\":[{\r\n        \"value\":\"Shoaib\"},\r\n        {\r\n        \"value\":\"Noor\"}\r\n    ]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}question",
+									"host": [
+										"{{API_URL}}question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "22"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 21:14:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "View",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}question/ea212279-bff1-473d-b08d-e55a92dff708",
+							"host": [
+								"{{API_URL}}question"
+							],
+							"path": [
+								"ea212279-bff1-473d-b08d-e55a92dff708"
+							]
+						},
+						"description": "This API is used to view question by using its UUID"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}question/01880eda-167c-415d-aa3e-96f0fdf28d2a",
+									"host": [
+										"{{API_URL}}question"
+									],
+									"path": [
+										"01880eda-167c-415d-aa3e-96f0fdf28d2a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "300"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 21:11:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"question\": {\n        \"questionID\": \"01880eda-167c-415d-aa3e-96f0fdf28d2a\",\n        \"type\": \"card\",\n        \"conditional\": false,\n        \"answerID\": [\n            \"d61b249e-fc92-4bf0-869d-75b981273ea4\",\n            \"8d8d7443-029b-43cf-b385-332b311e909c\"\n        ],\n        \"pageID\": \"178a5d5e-efc4-42e1-8b56-1d43f3bd889d\",\n        \"text\": \"What kind of product you need?\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"What is your role number?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}question/ea212279-bff1-473d-b08d-e55a92dff708",
+							"host": [
+								"{{API_URL}}question"
+							],
+							"path": [
+								"ea212279-bff1-473d-b08d-e55a92dff708"
+							]
+						},
+						"description": "This API is used to update questionnaire by using its UUID"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\":\"What is your role number?\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}question/ea212279-bff1-473d-b08d-e55a92dff708",
+									"host": [
+										"{{API_URL}}question"
+									],
+									"path": [
+										"ea212279-bff1-473d-b08d-e55a92dff708"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "44"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 21:16:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"updatedQuestion\": [\n        1\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}question",
+							"host": [
+								"{{API_URL}}question"
+							]
+						},
+						"description": "Get the list of questions"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}question",
+									"host": [
+										"{{API_URL}}question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,accept-encoding"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 21:15:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"question\": [\n        {\n            \"questionID\": \"01880eda-167c-415d-aa3e-96f0fdf28d2a\",\n            \"type\": \"card\",\n            \"conditional\": false,\n            \"answerID\": [\n                \"d61b249e-fc92-4bf0-869d-75b981273ea4\",\n                \"8d8d7443-029b-43cf-b385-332b311e909c\"\n            ],\n            \"pageID\": \"178a5d5e-efc4-42e1-8b56-1d43f3bd889d\",\n            \"text\": \"What kind of product you need?\"\n        },\n        {\n            \"questionID\": \"8dff2460-e861-4da7-b8fc-3ba6a75d3061\",\n            \"type\": \"card\",\n            \"conditional\": false,\n            \"answerID\": [\n                \"c1bfa212-43c2-4db4-8543-4decaf47b284\",\n                \"95db6d5f-1fd1-4a6f-bc67-e6bf6784b0f3\",\n                \"fda9d4bf-1b4f-4b88-bbc0-5ec5935891d8\"\n            ],\n            \"pageID\": \"eb10f915-78d1-4e94-808d-7b2117f2d4c9\",\n            \"text\": \"In which color?\"\n        },\n        {\n            \"questionID\": \"0bc5971c-0a75-4b71-ab8b-4e3f99d477be\",\n            \"type\": \"buttons\",\n            \"conditional\": false,\n            \"answerID\": [\n                \"e223aaee-2e96-448b-a93d-8e3c3f760557\",\n                \"8cdf41d8-d6f9-4451-9318-23826e4b0d92\",\n                \"ac8af380-51cf-44ab-bd43-e3ade83e2938\"\n            ],\n            \"pageID\": \"a2038428-c7ef-48b0-976c-8ee1f3cda024\",\n            \"text\": \"In which size?\"\n        },\n        {\n            \"questionID\": \"b9e1b267-ff78-4621-b1bd-2eb100998cbe\",\n            \"type\": \"buttons\",\n            \"conditional\": false,\n            \"answerID\": [\n                \"726bd8a5-81b0-4deb-8010-91381cebdbcf\",\n                \"2ee0a32d-c435-457f-b2f5-8b057f504584\",\n                \"91fe3c1a-a8b4-407c-bff3-23c80612ee06\",\n                \"b3d68495-8752-4925-8c39-53dc82ff5fe1\"\n            ],\n            \"pageID\": \"cde7a590-3d9b-4722-87a0-538f4ad99757\",\n            \"text\": \"What is your maximum price (upper limit)?\"\n        },\n        {\n            \"questionID\": \"fb68d9b4-b176-4eaa-b3fc-a28c6d16f41c\",\n            \"type\": \"card\",\n            \"conditional\": false,\n            \"answerID\": [],\n            \"pageID\": \"a877e8cb-7b9a-4bd4-b622-4f0437bc2eae\",\n            \"text\": \"What is your name?\"\n        },\n        {\n            \"questionID\": \"ea212279-bff1-473d-b08d-e55a92dff708\",\n            \"type\": \"card\",\n            \"conditional\": false,\n            \"answerID\": [],\n            \"pageID\": \"cc6de60f-e921-4dd2-8811-bef587da85c1\",\n            \"text\": \"What is your name?\"\n        }\n    ],\n    \"pagination\": {\n        \"total\": 6,\n        \"current\": 1,\n        \"first\": 1,\n        \"last\": 1,\n        \"next\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}product?page=2&pageSize=10",
+							"host": [
+								"{{API_URL}}product"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/product?page=2&pageSize=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"product"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,accept-encoding"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 19:28:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"data\": [\n        {\n            \"productID\": \"a9f0db29-ebcd-46d2-83bc-3eb1e8774be0\",\n            \"productName\": \"Ergonomic Plastic Shirt\",\n            \"pictureUrl\": \"http://placeimg.com/640/480\",\n            \"shortDescription\": \"Maiores reprehenderit quia sed adipisci tempore omnis et dolore consequuntur.\",\n            \"benefits\": \"tempora porro unde suscipit nihil\",\n            \"filterColor\": \"Blue\",\n            \"filterSize\": \"Small\",\n            \"productType\": \"Gift\",\n            \"price\": \"1000\"\n        },\n        {\n            \"productID\": \"e52a9e97-7bfe-4441-b181-d28048e029a8\",\n            \"productName\": \"Licensed Metal Computer\",\n            \"pictureUrl\": \"http://placeimg.com/640/480\",\n            \"shortDescription\": \"Harum quo exercitationem.\",\n            \"benefits\": \"et libero aut non est\",\n            \"filterColor\": \"Green\",\n            \"filterSize\": \"Medium\",\n            \"productType\": \"Gift\",\n            \"price\": \"10000\"\n        },\n        {\n            \"productID\": \"44894117-611a-4041-85b6-55b3597ffa94\",\n            \"productName\": \"Practical Concrete Hat\",\n            \"pictureUrl\": \"http://placeimg.com/640/480\",\n            \"shortDescription\": \"Distinctio inventore nulla necessitatibus velit.\",\n            \"benefits\": \"vero beatae voluptatem ut beatae\",\n            \"filterColor\": \"Black\",\n            \"filterSize\": \"Large\",\n            \"productType\": \"Household\",\n            \"price\": \"10000\"\n        },\n        {\n            \"productID\": \"3c3bcbb7-7cc8-4cd8-894a-88aa425df6d0\",\n            \"productName\": \"Intelligent Steel Sausages\",\n            \"pictureUrl\": \"http://placeimg.com/640/480\",\n            \"shortDescription\": \"Saepe laudantium vel impedit nobis temporibus laboriosam saepe.\",\n            \"benefits\": \"repellat quia ad occaecati minima\",\n            \"filterColor\": \"Blue\",\n            \"filterSize\": \"Medium\",\n            \"productType\": \"Gift\",\n            \"price\": \"3000\"\n        },\n        {\n            \"productID\": \"799e59ea-2dc1-4dcb-8715-e2475d3a2326\",\n            \"productName\": \"Generic Cotton Towels\",\n            \"pictureUrl\": \"http://placeimg.com/640/480\",\n            \"shortDescription\": \"Similique labore et molestiae.\",\n            \"benefits\": \"iusto non dolorem quas voluptates\",\n            \"filterColor\": \"Blue\",\n            \"filterSize\": \"Medium\",\n            \"productType\": \"Gift\",\n            \"price\": \"1000\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "View",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}product/a9f0db29-ebcd-46d2-83bc-3eb1e8774be0",
+							"host": [
+								"{{API_URL}}product"
+							],
+							"path": [
+								"a9f0db29-ebcd-46d2-83bc-3eb1e8774be0"
+							]
+						},
+						"description": "View an specific product using productID"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/product/a9f0db29-ebcd-46d2-83bc-3eb1e8774be0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"product",
+										"a9f0db29-ebcd-46d2-83bc-3eb1e8774be0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "389"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 19:29:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"data\": {\n        \"productID\": \"a9f0db29-ebcd-46d2-83bc-3eb1e8774be0\",\n        \"productName\": \"Ergonomic Plastic Shirt\",\n        \"pictureUrl\": \"http://placeimg.com/640/480\",\n        \"shortDescription\": \"Maiores reprehenderit quia sed adipisci tempore omnis et dolore consequuntur.\",\n        \"benefits\": \"tempora porro unde suscipit nihil\",\n        \"filterColor\": \"Blue\",\n        \"filterSize\": \"Small\",\n        \"productType\": \"Gift\",\n        \"price\": \"1000\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Page",
+			"item": [
+				{
+					"name": "QuestionByURL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}page/question/4",
+							"host": [
+								"{{API_URL}}page"
+							],
+							"path": [
+								"question",
+								"4"
+							]
+						},
+						"description": "View questions that lies on a specific page using a simple pageURL"
+					},
+					"response": [
+						{
+							"name": "succcess",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/page/question/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"page",
+										"question",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "826"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Sep 2023 11:21:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"data\": {\n        \"pageWithQuestions\": {\n            \"pageID\": \"7e2d23e8-35bf-4f3a-9c8d-f8c1e4426bde\",\n            \"urlEndpoint\": \"1\",\n            \"questionID\": [\n                \"bab57e5d-3242-490e-90f7-2ddf4daaaf1f\"\n            ],\n            \"conditional\": [],\n            \"Questions\": [\n                {\n                    \"questionID\": \"bab57e5d-3242-490e-90f7-2ddf4daaaf1f\",\n                    \"type\": \"card\",\n                    \"conditional\": false,\n                    \"answerID\": [\n                        \"d61b249e-fc92-4bf0-869d-75b981273ea4\",\n                        \"8d8d7443-029b-43cf-b385-332b311e909c\"\n                    ],\n                    \"pageID\": \"7e2d23e8-35bf-4f3a-9c8d-f8c1e4426bde\",\n                    \"text\": \"What kind of product you need?\"\n                }\n            ]\n        },\n        \"answers\": [\n            {\n                \"answerID\": \"d61b249e-fc92-4bf0-869d-75b981273ea4\",\n                \"value\": \"Household\",\n                \"questionID\": \"bab57e5d-3242-490e-90f7-2ddf4daaaf1f\",\n                \"creationTimestamp\": null,\n                \"modifiedTimestamp\": null\n            },\n            {\n                \"answerID\": \"8d8d7443-029b-43cf-b385-332b311e909c\",\n                \"value\": \"Gift\",\n                \"questionID\": \"bab57e5d-3242-490e-90f7-2ddf4daaaf1f\",\n                \"creationTimestamp\": null,\n                \"modifiedTimestamp\": null\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"0bc5971c-0a75-4b71-ab8b-4e3f99d477be\": { \r\n        \"b3d68495-8752-4925-8c39-53dc82ff5fe1\": {\r\n                \"answerID\": \"b3d68495-8752-4925-8c39-53dc82ff5fe1\",\r\n                \"value\": \"2000\",\r\n                \"questionID\": \"b9e1b267-ff78-4621-b1bd-2eb100998cbe\",\r\n                \"conditional\": false,\r\n                \"creationTimestamp\": null,\r\n                \"modifiedTimestamp\": null\r\n            }\r\n    } \r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}recommendation/answer/1d1b2b8b-e176-41f7-958b-d3c3f5a309a9",
+							"host": [
+								"{{API_URL}}recommendation"
+							],
+							"path": [
+								"answer",
+								"1d1b2b8b-e176-41f7-958b-d3c3f5a309a9"
+							]
+						},
+						"description": "Post an answer of the question it would take the questionaireID as a param and a dynamic body consist of other inormation in JSON"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"373593cdc-9046-4366-aa48-5acc5bda393d\": { \r\n        \"95db6d5f-1fd1-4a6f-bc67-e6bf6784b0f3\": {\r\n                \"answerID\": \"95db6d5f-1fd1-4a6f-bc67-e6bf6784b0f3\",\r\n                \"value\": \"Blue\",\r\n                \"questionID\": \"373593cdc-9046-4366-aa48-5acc5bda393d\",\r\n                \"creationTimestamp\": null,\r\n                \"modifiedTimestamp\": null\r\n            },\r\n            \"fda9d4bf-1b4f-4b88-bbc0-5ec5935891d8\": {\r\n                \"answerID\": \"fda9d4bf-1b4f-4b88-bbc0-5ec5935891d8\",\r\n                \"value\": \"Black\",\r\n                \"questionID\": \"373593cdc-9046-4366-aa48-5acc5bda393d\",\r\n                \"creationTimestamp\": null,\r\n                \"modifiedTimestamp\": null\r\n            }\r\n    }\r\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/recommendation/answer/05b19eea-7ff2-4f86-a26f-7b0752052a63",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"recommendation",
+										"answer",
+										"05b19eea-7ff2-4f86-a26f-7b0752052a63"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "35"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 17 Sep 2023 13:35:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"nextPage\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"urlEndpoint\":6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}page",
+							"host": [
+								"{{API_URL}}page"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"urlEndpoint\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/page",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"page"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "22"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 19:09:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "View",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}page/bc07a45d-fbe0-4fe2-b364-d0cfddf0cb7c",
+							"host": [
+								"{{API_URL}}page"
+							],
+							"path": [
+								"bc07a45d-fbe0-4fe2-b364-d0cfddf0cb7c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/page/bc07a45d-fbe0-4fe2-b364-d0cfddf0cb7c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"page",
+										"bc07a45d-fbe0-4fe2-b364-d0cfddf0cb7c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "130"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 19:14:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"data\": {\n        \"pageID\": \"bc07a45d-fbe0-4fe2-b364-d0cfddf0cb7c\",\n        \"urlEndpoint\": \"5\",\n        \"questionID\": [],\n        \"conditional\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"questionID\":[\"80e75ff5-7d94-46fd-97be-3c1df093e4ad\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}page/bc07a45d-fbe0-4fe2-b364-d0cfddf0cb7c",
+							"host": [
+								"{{API_URL}}page"
+							],
+							"path": [
+								"bc07a45d-fbe0-4fe2-b364-d0cfddf0cb7c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"questionID\":[\"80e75ff5-7d94-46fd-97be-3c1df093e4ad\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/page/bc07a45d-fbe0-4fe2-b364-d0cfddf0cb7c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"page",
+										"bc07a45d-fbe0-4fe2-b364-d0cfddf0cb7c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "40"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 19:18:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"updatedPage\": [\n        1\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}page",
+							"host": [
+								"{{API_URL}}page"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/page",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"page"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "587"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 19:21:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"data\": [\n        {\n            \"pageID\": \"87c8c199-a80f-4f34-9905-de5e3cb57660\",\n            \"urlEndpoint\": \"1\",\n            \"questionID\": [\n                \"b5060c49-2dca-4c39-9dd0-ad92f295fa7b\"\n            ],\n            \"conditional\": []\n        },\n        {\n            \"pageID\": \"d26267b2-e2be-4262-8154-2e063e6f83a3\",\n            \"urlEndpoint\": \"2\",\n            \"questionID\": [\n                \"a9680dde-2b7b-4baf-a471-4742a451067d\"\n            ],\n            \"conditional\": []\n        },\n        {\n            \"pageID\": \"46b161e4-306a-42cd-8082-2d7cd36608bd\",\n            \"urlEndpoint\": \"3\",\n            \"questionID\": [\n                \"cbef2f87-9f13-4411-9237-84d78c2e3af3\"\n            ],\n            \"conditional\": []\n        },\n        {\n            \"pageID\": \"a1d2b247-8ee3-4d7c-bf17-8f69f97c5c0f\",\n            \"urlEndpoint\": \"4\",\n            \"questionID\": [\n                \"80e75ff5-7d94-46fd-97be-3c1df093e4ad\"\n            ],\n            \"conditional\": []\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder contains CRUD APIs for Page"
+		},
+		{
+			"name": "Selector",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shoaibnoor95@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}selector",
+							"host": [
+								"{{API_URL}}selector"
+							]
+						},
+						"description": "This API creates a selector if the selector already exist then it returns the selectorID"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"shoaibnoor95@hotmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/selector",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"selector"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "74"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 18:52:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"selectorID\": \"b520ee5a-0e40-4279-89ac-3600bad6720b\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Questionaire",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"selectorID\":\"4d4e1e13-43f7-4e93-a0d4-3885bb8ff04b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}questionaire",
+							"host": [
+								"{{API_URL}}questionaire"
+							]
+						},
+						"description": "This API creates questionnaire and returns a questionnaireID"
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"selectorID\":\"471f2e28-8c86-474f-9089-b8cf824277cd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/questionaire",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"questionaire"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "78"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 18:52:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"questionaireID\": \"8b17931d-4bc0-4ff0-a6e3-d54b9239308d\",\n    \"message\": \"success.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Resume",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}questionaire/1d1b2b8b-e176-41f7-958b-d3c3f5a309a9",
+							"host": [
+								"{{API_URL}}questionaire"
+							],
+							"path": [
+								"1d1b2b8b-e176-41f7-958b-d3c3f5a309a9"
+							]
+						},
+						"description": "This API resume questionnaire and returns a page information. question and answer related on that page"
+					},
+					"response": [
+						{
+							"name": "Resume",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/questionaire/309b8b50-e29a-4ab7-8b0d-1205a6d515e6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"questionaire",
+										"309b8b50-e29a-4ab7-8b0d-1205a6d515e6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,accept-encoding"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Sep 2023 19:27:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"data\": {\n        \"questionaire\": {\n            \"questionaireID\": \"309b8b50-e29a-4ab7-8b0d-1205a6d515e6\",\n            \"pageUrlEndpoint\": 1,\n            \"selectorID\": \"260dec55-abb7-4d66-8f8e-7d6d23430925\",\n            \"status\": \"in-progress\",\n            \"creationTimestamp\": \"2023-09-12T19:10:41.446Z\",\n            \"modifiedTimestamp\": \"2023-09-12T19:10:41.446Z\",\n            \"Page\": {\n                \"pageID\": \"12e61676-ce4e-4390-a156-9aebeaa2c31c\",\n                \"urlEndpoint\": \"1\",\n                \"questionID\": [\n                    \"40fd71f2-333c-4cf2-9f7d-3e8de0b48d34\"\n                ],\n                \"conditional\": [],\n                \"Questions\": [\n                    {\n                        \"questionID\": \"40fd71f2-333c-4cf2-9f7d-3e8de0b48d34\",\n                        \"type\": \"sliders\",\n                        \"conditional\": false,\n                        \"answerID\": [\n                            \"d61b249e-fc92-4bf0-869d-75b981273ea4\",\n                            \"8d8d7443-029b-43cf-b385-332b311e909c\"\n                        ],\n                        \"pageID\": \"12e61676-ce4e-4390-a156-9aebeaa2c31c\",\n                        \"text\": \"What kind of product you need?\"\n                    }\n                ]\n            }\n        },\n        \"answers\": [\n            {\n                \"answerID\": \"d61b249e-fc92-4bf0-869d-75b981273ea4\",\n                \"value\": \"Household\",\n                \"questionID\": \"40fd71f2-333c-4cf2-9f7d-3e8de0b48d34\",\n                \"creationTimestamp\": null,\n                \"modifiedTimestamp\": null\n            },\n            {\n                \"answerID\": \"8d8d7443-029b-43cf-b385-332b311e909c\",\n                \"value\": \"Gift\",\n                \"questionID\": \"40fd71f2-333c-4cf2-9f7d-3e8de0b48d34\",\n                \"creationTimestamp\": null,\n                \"modifiedTimestamp\": null\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder contains API for creating and resuming the questionaire"
+		},
+		{
+			"name": "Recommendation",
+			"item": [
+				{
+					"name": "Recommendation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}recommendation/1d1b2b8b-e176-41f7-958b-d3c3f5a309a9",
+							"host": [
+								"{{API_URL}}recommendation"
+							],
+							"path": [
+								"1d1b2b8b-e176-41f7-958b-d3c3f5a309a9"
+							]
+						},
+						"description": "This API calculates the recommendations"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/recommendation/f3db76f1-f53b-4833-957b-dc660519e384",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"recommendation",
+										"f3db76f1-f53b-4833-957b-dc660519e384"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,accept-encoding"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 17 Sep 2023 21:42:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"recommendations\": [\n        {\n            \"product\": {\n                \"productID\": \"469aaf35-d5ff-4b86-a390-e8b48d809609\",\n                \"productName\": \"Awesome Frozen Chicken\",\n                \"pictureUrl\": \"http://placeimg.com/640/480\",\n                \"shortDescription\": \"Mollitia repellat ducimus.\",\n                \"benefits\": \"exercitationem in sed voluptate sequi\",\n                \"filterColor\": \"Green\",\n                \"filterSize\": \"Small\",\n                \"productType\": \"Household\",\n                \"price\": \"1000\"\n            },\n            \"score\": 1\n        },\n        {\n            \"product\": {\n                \"productID\": \"813b56d5-6d19-4506-8b7c-fa9ecb687793\",\n                \"productName\": \"Unbranded Frozen Sausages\",\n                \"pictureUrl\": \"http://placeimg.com/640/480\",\n                \"shortDescription\": \"Tempora repellendus eos consectetur iste perferendis minus nulla consequatur voluptatem.\",\n                \"benefits\": \"esse quisquam error sed et\",\n                \"filterColor\": \"Green\",\n                \"filterSize\": \"Small\",\n                \"productType\": \"Household\",\n                \"price\": \"1000\"\n            },\n            \"score\": 1\n        },\n        {\n            \"product\": {\n                \"productID\": \"10ad233f-fb9c-4336-be91-42d6fe37dffd\",\n                \"productName\": \"Tasty Steel Cheese\",\n                \"pictureUrl\": \"http://placeimg.com/640/480\",\n                \"shortDescription\": \"Fugiat ut fuga accusamus vel consequuntur dolorem consequatur perferendis.\",\n                \"benefits\": \"corrupti repudiandae nobis at officia\",\n                \"filterColor\": \"Green\",\n                \"filterSize\": \"Small\",\n                \"productType\": \"Household\",\n                \"price\": \"1000\"\n            },\n            \"score\": 1\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Stats",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\r\n  resultCount(startDate: \"2022-01-01\", endDate: \"2023-12-31\")\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}stats",
+							"host": [
+								"{{API_URL}}stats"
+							]
+						},
+						"description": "This API will get the total number of completed feedback with in the given date range it is graphql based"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query {\r\n  resultCount(startDate: \"2022-01-01\", endDate: \"2023-12-31\")\r\n}\r\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/stats",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"stats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "27"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1b-WD+jFLCjsYawP1K4GIsVzPSBMFg\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 15:13:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"resultCount\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Questionary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  updateSelector(id: \"85404b73-8469-4264-9872-08e50122f05b\",\r\n                email: \"shoaibnoor95@hotmail.com\",\r\n                status: \"blocked\"  ) {\r\n    selectorID\r\n    email\r\n    status\r\n  }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}user",
+							"host": [
+								"{{API_URL}}user"
+							]
+						},
+						"description": "This API is used to control questionary it is based on graphql it contains list questionary, update questionary, view a questionary which is also known as selector in the document"
+					},
+					"response": [
+						{
+							"name": "Update Call",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation {\r\n  updateSelector(id: \"37061ad6-0f16-4840-b5a2-16e3b05f4e9c\", \r\n  email: \"shoaibnoo951@hotmail.com\", status: \"active\") {\r\n    selectorID\r\n    email\r\n    status\r\n  }\r\n}\r\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "135"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"87-eJXjAgKCf36UxFHbJqgfLuxzVR8\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 17:32:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"updateSelector\": {\n            \"selectorID\": \"37061ad6-0f16-4840-b5a2-16e3b05f4e9c\",\n            \"email\": \"shoaibnoo951@hotmail.com\",\n            \"status\": \"active\"\n        }\n    }\n}"
+						},
+						{
+							"name": "View Call",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query {\r\n  selector(id: \"37061ad6-0f16-4840-b5a2-16e3b05f4e9c\") {\r\n    selectorID\r\n    email\r\n    status\r\n  }\r\n}\r\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}user",
+									"host": [
+										"{{API_URL}}user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "129"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"81-PulR+p2RVbWHlDPGcCPGURblJ80\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 17:34:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"selector\": {\n            \"selectorID\": \"37061ad6-0f16-4840-b5a2-16e3b05f4e9c\",\n            \"email\": \"shoaibnoo951@hotmail.com\",\n            \"status\": \"active\"\n        }\n    }\n}"
+						},
+						{
+							"name": "List call",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query {\r\n  selectors {\r\n    selectorID\r\n    email\r\n    status\r\n  }\r\n}\r\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}user",
+									"host": [
+										"{{API_URL}}user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "132"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"84-4ULjDmA4C6wmHd1q1XEY8StziPk\""
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 17:36:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"selectors\": [\n            {\n                \"selectorID\": \"37061ad6-0f16-4840-b5a2-16e3b05f4e9c\",\n                \"email\": \"shoaibnoo951@hotmail.com\",\n                \"status\": \"active\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder contains API for admin operations all are graphql based"
+		},
+		{
+			"name": "Condition",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}condition",
+							"host": [
+								"{{API_URL}}condition"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}condition",
+									"host": [
+										"{{API_URL}}condition"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "206"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 21:07:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"data\": [\n        {\n            \"answerID\": \"d61b249e-fc92-4bf0-869d-75b981273ea4\",\n            \"ConditionID\": \"876b3b66-1646-4d6c-b110-e94c18da7312\",\n            \"urlEndPoint\": \"5\",\n            \"questionID\": \"01880eda-167c-415d-aa3e-96f0fdf28d2a\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"answerID\":\"d61b249e-fc92-4bf0-869d-75b981273ea4\",\r\n    \"questionID\":\"01880eda-167c-415d-aa3e-96f0fdf28d2a\",\r\n    \"urlEndPoint\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}condition",
+							"host": [
+								"{{API_URL}}condition"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"answerID\":\"d61b249e-fc92-4bf0-869d-75b981273ea4\",\r\n    \"questionID\":\"01880eda-167c-415d-aa3e-96f0fdf28d2a\",\r\n    \"urlEndPoint\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}condition",
+									"host": [
+										"{{API_URL}}condition"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "75"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 21:06:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"conditionID\": \"876b3b66-1646-4d6c-b110-e94c18da7312\"\n}"
+						}
+					]
+				},
+				{
+					"name": "View",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/dev/foxbase/condition/876b3b66-1646-4d6c-b110-e94c18da7312",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"foxbase",
+								"condition",
+								"876b3b66-1646-4d6c-b110-e94c18da7312"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/dev/foxbase/condition/876b3b66-1646-4d6c-b110-e94c18da7312",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dev",
+										"foxbase",
+										"condition",
+										"876b3b66-1646-4d6c-b110-e94c18da7312"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "access-control-allow-headers",
+									"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-requested-with"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-length",
+									"value": "204"
+								},
+								{
+									"key": "accept-ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Sep 2023 21:08:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"success.\",\n    \"data\": {\n        \"answerID\": \"d61b249e-fc92-4bf0-869d-75b981273ea4\",\n        \"ConditionID\": \"876b3b66-1646-4d6c-b110-e94c18da7312\",\n        \"urlEndPoint\": \"5\",\n        \"questionID\": \"01880eda-167c-415d-aa3e-96f0fdf28d2a\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

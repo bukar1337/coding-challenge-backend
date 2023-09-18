@@ -1,0 +1,8 @@
+{
+    "general": "Whoops. Something went wrong!",
+    "notfound": "No record found.",
+    "questionaire_general": "Questionaire not found or already completed",
+    "user": {
+        "blocked": "Your account has been blocked by the adminstrator."
+    }
+}
